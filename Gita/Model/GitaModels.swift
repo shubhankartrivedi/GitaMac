@@ -19,3 +19,7 @@ struct ChapterModel: Decodable {
     let chapter_summary: String
     let chapter_summary_hindi: String
 }
+
+struct ChaptersResponse: Decodable {
+    let chapters: [ChapterModel]
+}

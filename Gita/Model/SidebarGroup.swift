@@ -6,3 +6,18 @@
 //
 
 import Foundation
+
+struct SidebarGroup: Identifiable, Hashable {
+    let id = UUID()
+    let title: String
+    let iconName: String
+    
+    init(title: String, iconName: String) {
+        self.title = title
+        self.iconName = iconName
+    }
+    
+    
+    
+    
+}

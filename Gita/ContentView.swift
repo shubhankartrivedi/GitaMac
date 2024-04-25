@@ -8,14 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var selection = GroupSection.sandbox
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        NavigationSplitView {
+            SidebarView(selection: $selection)
+        } detail: {
+            switch selection {
+            case .home:
+                HomeView()
+            case .sandbox:
+                SandboxView()
+            case .settings:
+                SettingsView()
+            }
+        }.navigationTitle(selection.displayName)
     }
 }
 

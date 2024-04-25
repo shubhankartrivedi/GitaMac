@@ -11,6 +11,16 @@
 		63FF97942BD99E6700C4EFCC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FF97932BD99E6700C4EFCC /* ContentView.swift */; };
 		63FF97962BD99E6800C4EFCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63FF97952BD99E6800C4EFCC /* Assets.xcassets */; };
 		63FF97992BD99E6800C4EFCC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63FF97982BD99E6800C4EFCC /* Preview Assets.xcassets */; };
+		63FF97A12BD99EAC00C4EFCC /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FF97A02BD99EAC00C4EFCC /* SidebarView.swift */; };
+		63FF97A32BD99FB800C4EFCC /* SandboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FF97A22BD99FB800C4EFCC /* SandboxView.swift */; };
+		63FF97A62BD9A06800C4EFCC /* SidebarGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FF97A52BD9A06800C4EFCC /* SidebarGroup.swift */; };
+		63FF97AC2BD9A73400C4EFCC /* GroupSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FF97AB2BD9A73400C4EFCC /* GroupSection.swift */; };
+		63FF97AE2BD9AB3200C4EFCC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FF97AD2BD9AB3200C4EFCC /* SettingsView.swift */; };
+		63FF97B02BD9AD5D00C4EFCC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FF97AF2BD9AD5D00C4EFCC /* HomeView.swift */; };
+		63FF97B82BDA579300C4EFCC /* GitaModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FF97B72BDA579300C4EFCC /* GitaModels.swift */; };
+		63FF97BB2BDA5A3D00C4EFCC /* Chapters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FF97BA2BDA5A3D00C4EFCC /* Chapters.swift */; };
+		63FF97BD2BDA5BD200C4EFCC /* FetchRawJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FF97BC2BDA5BD200C4EFCC /* FetchRawJson.swift */; };
+		63FF97C32BDA684500C4EFCC /* CodeEditor in Frameworks */ = {isa = PBXBuildFile; productRef = 63FF97C22BDA684500C4EFCC /* CodeEditor */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +30,15 @@
 		63FF97952BD99E6800C4EFCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63FF97982BD99E6800C4EFCC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		63FF979A2BD99E6800C4EFCC /* Gita.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Gita.entitlements; sourceTree = "<group>"; };
+		63FF97A02BD99EAC00C4EFCC /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
+		63FF97A22BD99FB800C4EFCC /* SandboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SandboxView.swift; sourceTree = "<group>"; };
+		63FF97A52BD9A06800C4EFCC /* SidebarGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarGroup.swift; sourceTree = "<group>"; };
+		63FF97AB2BD9A73400C4EFCC /* GroupSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupSection.swift; sourceTree = "<group>"; };
+		63FF97AD2BD9AB3200C4EFCC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		63FF97AF2BD9AD5D00C4EFCC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		63FF97B72BDA579300C4EFCC /* GitaModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitaModels.swift; sourceTree = "<group>"; };
+		63FF97BA2BDA5A3D00C4EFCC /* Chapters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapters.swift; sourceTree = "<group>"; };
+		63FF97BC2BDA5BD200C4EFCC /* FetchRawJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchRawJson.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63FF97C32BDA684500C4EFCC /* CodeEditor in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,7 +72,11 @@
 		63FF97902BD99E6700C4EFCC /* Gita */ = {
 			isa = PBXGroup;
 			children = (
+				63FF97B92BDA5A2A00C4EFCC /* Fetch */,
+				63FF97B12BDA3E1E00C4EFCC /* Pages */,
+				63FF97A42BD9A04F00C4EFCC /* Model */,
 				63FF97912BD99E6700C4EFCC /* GitaApp.swift */,
+				63FF97A02BD99EAC00C4EFCC /* SidebarView.swift */,
 				63FF97932BD99E6700C4EFCC /* ContentView.swift */,
 				63FF97952BD99E6800C4EFCC /* Assets.xcassets */,
 				63FF979A2BD99E6800C4EFCC /* Gita.entitlements */,
@@ -67,6 +91,35 @@
 				63FF97982BD99E6800C4EFCC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		63FF97A42BD9A04F00C4EFCC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				63FF97A52BD9A06800C4EFCC /* SidebarGroup.swift */,
+				63FF97AB2BD9A73400C4EFCC /* GroupSection.swift */,
+				63FF97B72BDA579300C4EFCC /* GitaModels.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		63FF97B12BDA3E1E00C4EFCC /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				63FF97AF2BD9AD5D00C4EFCC /* HomeView.swift */,
+				63FF97A22BD99FB800C4EFCC /* SandboxView.swift */,
+				63FF97AD2BD9AB3200C4EFCC /* SettingsView.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		63FF97B92BDA5A2A00C4EFCC /* Fetch */ = {
+			isa = PBXGroup;
+			children = (
+				63FF97BA2BDA5A3D00C4EFCC /* Chapters.swift */,
+				63FF97BC2BDA5BD200C4EFCC /* FetchRawJson.swift */,
+			);
+			path = Fetch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +138,9 @@
 			dependencies = (
 			);
 			name = Gita;
+			packageProductDependencies = (
+				63FF97C22BDA684500C4EFCC /* CodeEditor */,
+			);
 			productName = Gita;
 			productReference = 63FF978E2BD99E6700C4EFCC /* Gita.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +169,9 @@
 				Base,
 			);
 			mainGroup = 63FF97852BD99E6700C4EFCC;
+			packageReferences = (
+				63FF97C12BDA684500C4EFCC /* XCRemoteSwiftPackageReference "CodeEditor" */,
+			);
 			productRefGroup = 63FF978F2BD99E6700C4EFCC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,8 +198,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63FF97AE2BD9AB3200C4EFCC /* SettingsView.swift in Sources */,
+				63FF97BD2BDA5BD200C4EFCC /* FetchRawJson.swift in Sources */,
 				63FF97942BD99E6700C4EFCC /* ContentView.swift in Sources */,
 				63FF97922BD99E6700C4EFCC /* GitaApp.swift in Sources */,
+				63FF97A62BD9A06800C4EFCC /* SidebarGroup.swift in Sources */,
+				63FF97AC2BD9A73400C4EFCC /* GroupSection.swift in Sources */,
+				63FF97BB2BDA5A3D00C4EFCC /* Chapters.swift in Sources */,
+				63FF97B02BD9AD5D00C4EFCC /* HomeView.swift in Sources */,
+				63FF97A32BD99FB800C4EFCC /* SandboxView.swift in Sources */,
+				63FF97B82BDA579300C4EFCC /* GitaModels.swift in Sources */,
+				63FF97A12BD99EAC00C4EFCC /* SidebarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,7 +338,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = Gita/Gita.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -279,14 +349,17 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = GitaMac;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.shubhankar.Gita;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -297,7 +370,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = Gita/Gita.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -306,14 +381,17 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = GitaMac;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.shubhankar.Gita;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -341,6 +419,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		63FF97C12BDA684500C4EFCC /* XCRemoteSwiftPackageReference "CodeEditor" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ZeeZide/CodeEditor.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		63FF97C22BDA684500C4EFCC /* CodeEditor */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 63FF97C12BDA684500C4EFCC /* XCRemoteSwiftPackageReference "CodeEditor" */;
+			productName = CodeEditor;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 63FF97862BD99E6700C4EFCC /* Project object */;
 }
