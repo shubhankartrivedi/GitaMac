@@ -28,6 +28,9 @@ struct SandboxView: View {
                 HStack{
                     if(selected == "spec-c" || selected == "all-v:spec-c"){
                         TextField("Chapter Number", text: $chapter)
+                        #if os(iOS)
+                            .keyboardType(.numberPad)
+                        #endif
                             .onChange(of: chapter) { newValue in
                                 if(selected == "spec-c"){
                                     url = "/api/v1/chapter/\(newValue)/"
@@ -39,11 +42,17 @@ struct SandboxView: View {
                     }
                     if(selected == "spec-v:spec-c"){
                         TextField("Chapter Number", text: $chapter)
+                        #if os(iOS)
+                            .keyboardType(.numberPad)
+                        #endif
                             .onChange(of: chapter) { newValue in
                                 url = "/api/v1/chapter/\(newValue)/verse/\(verse)"
                             }
                         
                         TextField("Verse Number", text: $verse)
+                        #if os(iOS)
+                            .keyboardType(.numberPad)
+                        #endif
                             .onChange(of: verse) { newValue in
                                 url = "/api/v1/chapter/\(chapter)/verse/\(newValue)"
                             }
@@ -92,6 +101,7 @@ struct SandboxView: View {
                             Text("Specific verse of specific chapter")
                         }
                     }
+                    Spacer()
                     if(loading){
                         ProgressView()
                             .progressViewStyle(.linear)
@@ -103,8 +113,6 @@ struct SandboxView: View {
                                 Alert(title: Text("Error"), message: Text("Not connected to internet"), dismissButton: .default(Text("Okay")))
                             }
                     }
-                    
-                    
                 }
             }
             .padding()

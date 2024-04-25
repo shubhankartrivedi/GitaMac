@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var selection = GroupSection.sandbox
+    @State private var selection: GroupSection? = GroupSection.sandbox
     var body: some View {
         NavigationSplitView {
             SidebarView(selection: $selection)
@@ -20,8 +20,10 @@ struct ContentView: View {
                 SandboxView()
             case .settings:
                 SettingsView()
+            case .none:
+                Text("None")
             }
-        }.navigationTitle(selection.displayName)
+        }.navigationTitle(selection!.displayName)
     }
 }
 

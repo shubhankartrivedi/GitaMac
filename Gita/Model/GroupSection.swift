@@ -50,6 +50,12 @@ enum GroupSection: Identifiable, CaseIterable, Hashable {
     static var allCases: [GroupSection] {
         [.home, .sandbox, .settings]
     }
+    static var user: [GroupSection] {
+        [.home]
+    }
+    static var developer: [GroupSection] {
+        [.sandbox, .settings]
+    }
     
     static func == (lhs: GroupSection, rhs: GroupSection) -> Bool {
         lhs.id == rhs.id
