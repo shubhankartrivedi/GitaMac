@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import CodeEditor
 
 
 struct SandboxView: View {
@@ -22,7 +21,20 @@ struct SandboxView: View {
     
     var body: some View {
         VStack{
-            CodeEditor(source: $text, language: .json, theme: .default)
+            ScrollView{
+                TextEditor(text: .constant(text))
+                    .monospaced()
+                    .lineLimit(nil)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .multilineTextAlignment(.leading)
+                    .scrollContentBackground(.hidden)
+                    .padding()
+//                Text(text)
+//                    .monospaced()
+//                    .textSelection(.enabled)
+//                    .padding()
+            }
+            
             VStack(alignment: .leading){
                 
                 HStack{
@@ -103,19 +115,28 @@ struct SandboxView: View {
                     }
                     Spacer()
                     if(loading){
+                        #if os(iOS)
+                        ProgressView()
+                            .progressViewStyle(.circular)
+                            .frame(width: 47, height: .leastNonzeroMagnitude)
+                        #endif
+                        #if os(macOS)
                         ProgressView()
                             .progressViewStyle(.linear)
-                            .frame(width: 47)
+                            .frame(width: 47, height: .leastNonzeroMagnitude)
+                        #endif
                     }
                     else {
                         Button("Send", action: Send)
+                            .keyboardShortcut(.return)
                             .alert(isPresented: $errorBox) {
-                                Alert(title: Text("Error"), message: Text("Not connected to internet"), dismissButton: .default(Text("Okay")))
+                                Alert(title: Text("Error"), message: Text("Maybe not connected to internet"), dismissButton: .default(Text("Okay")))
                             }
                     }
                 }
             }
             .padding()
+            
         }
     }
     

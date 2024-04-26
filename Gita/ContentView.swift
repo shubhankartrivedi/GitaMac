@@ -23,7 +23,7 @@ struct ContentView: View {
             case .none:
                 Text("None")
             }
-        }.navigationTitle(selection!.displayName)
+        }.navigationTitle(selection?.displayName ?? "Home")
     }
 }
 

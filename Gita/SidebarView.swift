@@ -24,16 +24,35 @@ struct SidebarView: View {
                         Label(selection.displayName, systemImage: selection.iconName)
                             .tag(selection)
                     }
+                    Button(action:Redirect){
+                        Label(
+                            title: { Text(verbatim: "Github") },
+                            icon: { Image(systemName: "curlybraces") }
+                        )
+                    }.buttonStyle(.plain)
+                        
+                    }
                 }
-            }
+                
+            
+            
                 
         }
-        .navigationTitle(selection!.displayName)
 
         
     }
 }
-
+func Redirect(){
+    if let url = URL(string: "https://github.com/shubhankartrivedi/GitaMac") {
+    #if os(iOS)
+        UIApplication.shared.open(url)
+    #endif
+    #if os(macOS)
+        NSWorkspace.shared.open(url)
+    #endif
+    }
+ 
+}
 #Preview {
     SidebarView(selection: .constant(.sandbox))
         .listStyle(.sidebar)
