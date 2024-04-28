@@ -8,25 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var selection: GroupSection? = GroupSection.sandbox
+    @State private var selection: GroupSection? = GroupSection.home
+    @StateObject var chaptersViewModel = ChaptersViewModel()
     var body: some View {
         NavigationSplitView {
             SidebarView(selection: $selection)
         } detail: {
-            switch selection {
-            case .home:
-                HomeView()
-            case .sandbox:
-                SandboxView()
-            case .settings:
-                SettingsView()
-            case .none:
-                Text("None")
+            Group {
+                switch selection {
+                case .home:
+                    HomeView(viewModel: chaptersViewModel)
+                case .sandbox:
+                    SandboxView()
+                case .settings:
+                    SettingsView()
+                case .none:
+                    Text("Select an Option")
+                }
             }
-        }.navigationTitle(selection?.displayName ?? "Home")
+            .navigationTitle(selection?.displayName ?? "Select a Section")
+        }
     }
 }
-
 #Preview {
     ContentView()
 }

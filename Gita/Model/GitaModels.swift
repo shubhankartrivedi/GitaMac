@@ -23,3 +23,18 @@ struct ChapterModel: Decodable {
 struct ChaptersResponse: Decodable {
     let chapters: [ChapterModel]
 }
+
+func exampleChapter() -> ChapterModel{
+    return ChapterModel(
+            id: 1,
+            name: "Genesis",
+            slug: "genesis",
+            name_transliterated: "Bereishit",
+            name_translated: "In the beginning",
+            verses_count: 1533,
+            chapter_number: 1,
+            name_meaning: "The first book of Moses",
+            chapter_summary: "The creation of the world, the early history of humanity.",
+            chapter_summary_hindi: "विश्व की रचना, मानवता का प्रारंभिक इतिहास।"
+        )
+}

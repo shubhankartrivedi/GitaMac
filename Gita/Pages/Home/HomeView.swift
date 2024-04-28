@@ -8,31 +8,30 @@
 import SwiftUI
 
 struct HomeView: View {
-    @StateObject var viewModel = ChaptersViewModel()
+    @StateObject var viewModel: ChaptersViewModel
     
     var body: some View {
+        NavigationStack(){
             ScrollView {
                 LazyVStack {
                     ForEach(viewModel.chapters, id: \.id) { chapter in
-                        NavigationLink(destination: ChapterDetailView(chapter: chapter)) {
-                            VStack(alignment: .leading) {
-                                HStack {
-                                    Text(chapter.name)
-                                        .font(.headline)
-                                        .foregroundColor(.primary)
-                                    Spacer()
-                                    Text(chapter.name_translated)
-                                        .foregroundColor(.secondary)
-                                }
-                                Text("Verses: \(chapter.verses_count)")
-                                    .font(.subheadline)
-                                    .foregroundColor(.gray)
+                        NavigationLink(destination: ChapterDetailView(chapter: chapter)){VStack(alignment: .leading) {
+                            HStack {
+                                Text(chapter.name)
+                                    .font(.headline)
+                                    .foregroundColor(.primary)
+                                Spacer()
+                                Text(chapter.name_translated)
+                                    .foregroundColor(.secondary)
                             }
-                            .padding()
-                            .background(Color.white) // You can customize the background color here
-                            .cornerRadius(10)
-                            .shadow(radius: 2) // Optional shadow for a card-like effect
-                        }
+                            Text("Verses: \(chapter.verses_count)")
+                                .font(.subheadline)
+                                .foregroundColor(.primary)
+                        }.padding()
+                                .background(.box)
+                                .cornerRadius(10)
+                                
+                        }.buttonStyle(PlainButtonStyle())
                     }
                 }
                 .padding()
@@ -44,8 +43,10 @@ struct HomeView: View {
                 if viewModel.isLoading {
                     ProgressView("Loading...")
                 }
+                
             }
-        }
+        }.contentTransition(.opacity)
+    }
     
     
 }
@@ -55,6 +56,7 @@ class ChaptersViewModel: ObservableObject {
     @Published var errorMessage: String?
     
     func loadChapters() {
+        guard chapters.isEmpty else { return }
         isLoading = true
         fetchChapters { [weak self] result in
             DispatchQueue.main.async {
@@ -69,6 +71,4 @@ class ChaptersViewModel: ObservableObject {
         }
     }
 }
-#Preview {
-    HomeView()
-}
+

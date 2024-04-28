@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6339DC1C2BDE3F43002E19A7 /* ChapterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6339DC1B2BDE3F43002E19A7 /* ChapterDetailView.swift */; };
 		63FF97922BD99E6700C4EFCC /* GitaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FF97912BD99E6700C4EFCC /* GitaApp.swift */; };
 		63FF97942BD99E6700C4EFCC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FF97932BD99E6700C4EFCC /* ContentView.swift */; };
 		63FF97962BD99E6800C4EFCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63FF97952BD99E6800C4EFCC /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6339DC1B2BDE3F43002E19A7 /* ChapterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterDetailView.swift; sourceTree = "<group>"; };
 		634BD1AD2BDA8B3200845BE6 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63FF978E2BD99E6700C4EFCC /* Gita.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gita.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63FF97912BD99E6700C4EFCC /* GitaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitaApp.swift; sourceTree = "<group>"; };
@@ -65,6 +67,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6339DC1A2BDE3F2D002E19A7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				63FF97AF2BD9AD5D00C4EFCC /* HomeView.swift */,
+				6339DC1B2BDE3F43002E19A7 /* ChapterDetailView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		63FF97852BD99E6700C4EFCC = {
 			isa = PBXGroup;
 			children = (
@@ -119,7 +130,7 @@
 		63FF97B12BDA3E1E00C4EFCC /* Pages */ = {
 			isa = PBXGroup;
 			children = (
-				63FF97AF2BD9AD5D00C4EFCC /* HomeView.swift */,
+				6339DC1A2BDE3F2D002E19A7 /* Home */,
 				63FF97A22BD99FB800C4EFCC /* SandboxView.swift */,
 				63FF97AD2BD9AB3200C4EFCC /* SettingsView.swift */,
 			);
@@ -217,6 +228,7 @@
 				63FF97A62BD9A06800C4EFCC /* SidebarGroup.swift in Sources */,
 				63FF97AC2BD9A73400C4EFCC /* GroupSection.swift in Sources */,
 				63FF97BB2BDA5A3D00C4EFCC /* Chapters.swift in Sources */,
+				6339DC1C2BDE3F43002E19A7 /* ChapterDetailView.swift in Sources */,
 				63FF97B02BD9AD5D00C4EFCC /* HomeView.swift in Sources */,
 				63FF97A32BD99FB800C4EFCC /* SandboxView.swift in Sources */,
 				63FF97B82BDA579300C4EFCC /* GitaModels.swift in Sources */,
@@ -379,7 +391,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 0.3;
+				MARKETING_VERSION = 0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.shubhankar.Gita;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = macosx;
@@ -415,7 +427,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 0.3;
+				MARKETING_VERSION = 0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.shubhankar.Gita;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = macosx;

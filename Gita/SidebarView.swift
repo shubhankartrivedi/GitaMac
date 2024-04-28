@@ -17,7 +17,7 @@ struct SidebarView: View {
                         Label(selection.displayName, systemImage: selection.iconName)
                             .tag(selection)
                     }
-                }
+                }.collapsible(false)
                 
                 Section("Developer"){
                     ForEach(GroupSection.developer) { selection in
