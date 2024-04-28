@@ -1,5 +1,5 @@
 # Gita Mac
-<img  alt="Version"  src="https://img.shields.io/badge/version-0.3-blue.svg?cacheSeconds=2592000"  />
+<img  alt="Version"  src="https://img.shields.io/badge/version-0.4-blue.svg?cacheSeconds=2592000"  />
 Gita Client App for macOS using GitaAPI
 
 
